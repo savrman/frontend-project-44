@@ -22,8 +22,8 @@ export const playGame = (gameDescription, getGameSet) => {
   }
 
   if (playedGamesNum === ANSWERS_TO_WIN) {
-    console.log(`Congratulations, ${name}`);
+    console.log(`Congratulations, ${name}!`);
   } else {
-    console.log(`Let's try again, ${name}`);
+    console.log(`Let's try again, ${name}!`);
   }
 };
