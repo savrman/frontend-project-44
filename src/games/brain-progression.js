@@ -14,7 +14,10 @@ export const getGameSet = () => {
   for (let i = 1; i < progressionSize; i += 1) {
     progressionNumbers.push(progressionNumbers.at(-1) + difference);
   }
-  const progressionHiddenNumbers = progressionNumbers.map((item, index) => (index === hiddenElementIndex) ? '..' : item);
+  const progressionHiddenNumbers = progressionNumbers.map((item, index) => {
+    const result = (index === hiddenElementIndex) ? '..' : item;
+    return result;
+  });
   gameSet.question = progressionHiddenNumbers.join(' ');
   gameSet.answer = String(progressionNumbers[hiddenElementIndex]);
 
