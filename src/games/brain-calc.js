@@ -15,7 +15,7 @@ export const getGameSet = () => {
   expression += String(operand2);
   gameSet.question = String(expression);
 
-  let result = (() => {
+  const result = (() => {
     switch (operator) {
       case '+':
         return operand1 + operand2;

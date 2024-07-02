@@ -7,10 +7,10 @@ export const playGame = (gameDescription, getGameSet) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}`);
   console.log(gameDescription);
-  
+
   let playedGamesNum = 0;
   while (playedGamesNum < ANSWERS_TO_WIN) {
-    const {question, answer} = getGameSet();
+    const { question, answer } = getGameSet();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== answer) {
