@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const playGame = (gameDescription, getGameSet) => {
+const playGame = (gameDescription, getGameSet) => {
   const ANSWERS_TO_WIN = 3;
 
   console.log('Welcome to the Brain Games!');
@@ -27,3 +27,5 @@ export const playGame = (gameDescription, getGameSet) => {
     console.log(`Let's try again, ${name}!`);
   }
 };
+
+export default playGame;
