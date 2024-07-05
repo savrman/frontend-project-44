@@ -3,7 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/83900d05f244f0c75fc6/maintainability)](https://codeclimate.com/github/savrman/frontend-project-44/maintainability)
 
 ## About
-First educational project for the course on mastering frontend development at Hexlet School @Hexlet .
+First educational project for the course on mastering frontend development at Hexlet School.
 
 Brain Games is a set of five console games based on the principle of popular mobile brain—boosting applications.
 Each game asks questions that need to be answered correctly.
