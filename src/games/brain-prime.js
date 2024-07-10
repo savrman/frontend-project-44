@@ -33,9 +33,7 @@ export const getGameSet = () => {
 
   const number = getRandomIntNumber(1, 1000);
   gameSet.question = String(number);
-
-  const isNumberPrime = isPrime(number);
-  const answer = isNumberPrime ? 'yes' : 'no';
+  const answer = isPrime(number) ? 'yes' : 'no';
   gameSet.answer = String(answer);
 
   return gameSet;
