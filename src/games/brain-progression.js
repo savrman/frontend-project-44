@@ -1,10 +1,17 @@
 import getRandomIntNumber from '../random.js';
 
 const getProgression = () => {
+  const MIN_PROGRESSION_SIZE = 5;
+  const MAX_PROGRESSION_SIZE = 10;
+  const MIN_PROGRESSION_NUMBER = 0;
+  const MAX_PROGRESSION_NUMBER = 100;
+  const MIN_DIFFERENCE = 10;
+  const MAX_DIFFERENCE = 100;
+
   const progressionNumbers = [];
-  const progressionSize = getRandomIntNumber(5, 11);
-  const firstElement = getRandomIntNumber(0, 101);
-  const difference = getRandomIntNumber(0, 101);
+  const progressionSize = getRandomIntNumber(MIN_PROGRESSION_SIZE, MAX_PROGRESSION_SIZE);
+  const firstElement = getRandomIntNumber(MIN_PROGRESSION_NUMBER, MAX_PROGRESSION_NUMBER);
+  const difference = getRandomIntNumber(MIN_DIFFERENCE, MAX_DIFFERENCE);
   progressionNumbers.push(firstElement);
   for (let i = 1; i < progressionSize; i += 1) {
     progressionNumbers.push(progressionNumbers.at(-1) + difference);

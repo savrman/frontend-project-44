@@ -6,13 +6,15 @@ const operatorMap = {
   '-': (operand1, operand2) => operand1 - operand2,
   '*': (operand1, operand2) => operand1 * operand2,
 };
+const MIN_RANDOM_NUMBER = 0;
+const MAX_RANDOM_NUMBER = 100;
 
 export const gameDescription = 'What is the result of the expression?';
 
 export const getGameSet = () => {
-  const operand1 = getRandomIntNumber(0, 100);
-  const operand2 = getRandomIntNumber(0, 100);
-  const operator = operations[getRandomIntNumber(0, 3)];
+  const operand1 = getRandomIntNumber(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+  const operand2 = getRandomIntNumber(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+  const operator = operations[getRandomIntNumber(0, operations.length - 1)];
   const gameSet = {};
   const expression = `${operand1} ${operator} ${operand2}`;
   gameSet.question = expression;

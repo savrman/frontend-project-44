@@ -25,13 +25,15 @@ const isPrime = (number) => {
   }
   return true;
 };
+const MIN_RANDOM_NUMBER = 1;
+const MAX_RANDOM_NUMBER = 1000;
 
 export const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export const getGameSet = () => {
   const gameSet = {};
 
-  const number = getRandomIntNumber(1, 1000);
+  const number = getRandomIntNumber(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
   gameSet.question = String(number);
   const answer = isPrime(number) ? 'yes' : 'no';
   gameSet.answer = String(answer);
