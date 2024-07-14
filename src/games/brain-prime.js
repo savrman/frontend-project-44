@@ -18,7 +18,7 @@ const isPrime = (number) => {
 
   // More about: https://stepik.org/media/attachments/course/4603/module2__1_.pdf
   const greatestDiv = Math.sqrt(number);
-  for (let div = 3; div < greatestDiv; div += 2) {
+  for (let div = 3; div <= greatestDiv; div += 2) {
     if (number % div === 0) {
       return false;
     }
